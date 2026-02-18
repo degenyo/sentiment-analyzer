@@ -1,7 +1,9 @@
 import express from "express";
+import cors from "cors";
 import Sentiment from "sentiment";
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 const analyzer = new Sentiment();
